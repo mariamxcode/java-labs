@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class NokiaMenu{
-
+static Scanner scanner = new Scanner(System.in);
 public static void main(String... args){
 
 accessMenu();
@@ -56,7 +56,7 @@ public static void phoneBook(){
         int phoneChoice = scanner.nextInt();
         switch (phoneChoice){
             case 1:
-               print("You are now searching the phone book");
+               System.out.println("You are now searching the phone book");
             case 2:
                System.out.print("This is Service No ");
                break;
@@ -176,7 +176,7 @@ if  (settingChoice == 0){
 }
 
 
-public static String messages(){
+public static void messages(){
  String  messageMenu ="""
     
         1. Write messages 
@@ -237,7 +237,7 @@ break;
 public static void chat(){
     System.out.print("Chat");
 }
-public static String duration(){
+public static void duration(){
 String durationMenu="""
                 1.Last call duration
                 2.All call duration
@@ -273,7 +273,7 @@ break;
 }
  }                       
 }
-public static String callRegister(){
+public static void callRegister(){
 String callMenu ="""
     
         1. Missed Call 
@@ -349,7 +349,7 @@ break;
 }
 }            
                  
-public static String tones(){
+public static void tones(){
  String  toneMenu ="""
     
         1. Ringing Tone
@@ -399,7 +399,7 @@ switch(toneChoice){
         }                                 
 }
   }
-public static String callSetting(){
+public static void callSetting(){
  String callSettingsMenu="""
                     1.Automatic redial
                     2.Speed dialing
@@ -440,7 +440,7 @@ case 0:
                         
   }    
 }
-public static String phoneSettings(){
+public static void  phoneSettings(){
 
 String phoneSettingsMenu="""
                     1.Language
@@ -540,7 +540,7 @@ while (true){
                 phoneSettings();
                 break;
             case 3:
-                securitySetting();
+                securitySettings();
                 break;
             case 4:
                 System.out.println("Restore Factory Settings");
@@ -675,7 +675,7 @@ public static void accessMenu(){
     """;
     while (true){
         System.out.println(nokiaMenu);
-        menuChoice = scanner.nextInt();
+       int  menuChoice = scanner.nextInt();
         switch (menuChoice){ 
             case 1: 
                phoneBook();
@@ -731,3 +731,5 @@ public static void accessMenu(){
              }
 }
 }
+
+
