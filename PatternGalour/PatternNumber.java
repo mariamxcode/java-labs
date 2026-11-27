@@ -1,0 +1,19 @@
+public class PatternNumber{
+public static void main(String...args){
+for(int line = 1; line <= 8; line++){
+for(int number = line; number <= 8; number++){
+System.out.print(number);
+}
+System.out.println();
+}
+
+for(int line = 8; line >= 1; line--){
+for(int number = line; number <= 8; number++){
+System.out.print(number);
+}
+System.out.println();
+}
+}
+
+}
+
